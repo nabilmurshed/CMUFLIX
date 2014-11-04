@@ -1,0 +1,38 @@
+<HTML>
+
+<center>
+<br><br>
+<h1> Welcome to CMUQFlix </h1>
+<br>
+<h2> Log In </h2>
+
+
+<FORM ACTION="LoginServlet" METHOD="POST" NAME="LoginForm">
+	
+	<!-- text boxes -->
+	<INPUT TYPE="text" NAME="username" VALUE="Eg. Superman1" id="t1"><br> 		<!-- "text" determines that the field is a text box -->
+	<INPUT TYPE="password" NAME="password"><P>									<!-- "password" determines that the field is a password text box where character are displayed as * -->
+		
+	<!-- buttons -->
+	<INPUT TYPE="reset" VALUE="Reset Values"><P>								<!-- "reset" is a button that resets the values of all text boxes -->
+	<INPUT TYPE="submit" VALUE="Log-in"><P>										<!-- "submit" is a button that sends the values of all text boxes to the server (at the address specified in ACTION) -->
+
+</FORM>
+<br><br><br>
+<h2> Not a user? Register now! </h2>
+<FORM ACTION="RegistrationServlet" METHOD="POST" NAME="registrationForm">
+	
+	<!-- text boxes -->
+	Choose a Username  <INPUT TYPE="text" NAME="rusername" VALUE="Eg. Superman1" id="t1"><br> 		<!-- "text" determines that the field is a text box -->
+	Choose a password  <INPUT TYPE="password" NAME="rpassword"><br>									<!-- "password" determines that the field is a password text box where character are displayed as * -->
+	Confirm password  <INPUT TYPE="password" NAME="repassword"><br>									<!-- "password" determines that the field is a password text box where character are displayed as * -->
+	Enter your email  <INPUT TYPE="email" NAME="email" VALUE="Eg. superman@comics.com"><P>									
+		
+	<!-- buttons -->
+	<INPUT TYPE="reset" VALUE="Reset Values"><P>								<!-- "reset" is a button that resets the values of all text boxes -->
+	<INPUT TYPE="submit" VALUE="Register-in"><P>										<!-- "submit" is a button that sends the values of all text boxes to the server (at the address specified in ACTION) -->
+
+</FORM>
+</center>
+
+</HTML>

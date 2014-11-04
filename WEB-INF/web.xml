@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0">
+
+	<!-- general description of CMUQFlix -->
+	<display-name>
+		CMUQ's Movie Recommendation Website 
+	</display-name>
+
+	<description>
+		This is a website that recommends movies
+		based on movies liked by users, similar
+		to NetFlix
+	</description>
+
+
+	<!-- Servlets definitions: defines a servlet's name, description and class -->
+
+	<!-- Servlet 1: getLogin -->
+	<servlet>	
+
+		<servlet-name>
+			LoginServlet
+		</servlet-name>
+
+		<description>
+			This servlet gets a user's credentials
+			including username and password
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.Login
+		</servlet-class>
+
+	</servlet>
+
+	<servlet-mapping>
+
+		<servlet-name>
+			LoginServlet
+		</servlet-name>
+
+		<url-pattern>
+			/LoginServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 2: Registration -->
+	<servlet>	
+
+		<servlet-name>
+			RegistrationServlet
+		</servlet-name>
+
+		<description>
+			This servlet gets a user's credentials
+			including username and password and email
+			to register him/her into the Database
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.Register
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			RegistrationServlet
+		</servlet-name>
+
+		<url-pattern>
+			/RegistrationServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 3: Liking page -->
+	<servlet>	
+
+		<servlet-name>
+			LikeServlet
+		</servlet-name>
+
+		<description>
+			A web page which lists all movies in the 
+			database with a checkbox “Like” next 
+			to each entry they have not yet liked.
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.likepage
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			LikeServlet
+		</servlet-name>
+
+		<url-pattern>
+			/LikeServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 4: Profile page -->
+	<servlet>	
+
+		<servlet-name>
+			ProfileServlet
+		</servlet-name>
+
+		<description>
+			Profile page of the user
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.profile
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			ProfileServlet
+		</servlet-name>
+
+		<url-pattern>
+			/ProfileServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 4: Summary page -->
+	<servlet>	
+
+		<servlet-name>
+			summaryServlet
+		</servlet-name>
+
+		<description>
+			Summary page of the site
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.summary
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			summaryServlet
+		</servlet-name>
+
+		<url-pattern>
+			/summaryServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 5: Logout prompt -->
+	<servlet>	
+
+		<servlet-name>
+			logoutServlet
+		</servlet-name>
+
+		<description>
+			logs out and redirects to index.html
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.logout
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			logoutServlet
+		</servlet-name>
+
+		<url-pattern>
+			/logoutServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+
+	<!-- Servlet 6: Recommendation page -->
+	<servlet>	
+
+		<servlet-name>
+			recommendServlet
+		</servlet-name>
+
+		<description>
+			Recommends 5 movies based on clan popularity
+		</description>
+
+		<servlet-class>
+			local.cmu.qatar.db.recommend
+		</servlet-class>
+
+	</servlet>
+
+	<!-- Servlets mappings: defines a servlet's name and corresponding URI -->
+
+	<servlet-mapping>
+
+		<servlet-name>
+			recommendServlet
+		</servlet-name>
+
+		<url-pattern>
+			/recommendServlet
+		</url-pattern>
+		
+	</servlet-mapping>
+</web-app>
+
